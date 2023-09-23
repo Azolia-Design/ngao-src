@@ -2,7 +2,7 @@
     font-family: 'inter';
     src: url('../fonts/Inter-Variable.ttf');
 }
-$cl-bg: #FCECDE;
+$cl-bg: #FDF6F0;
 $cl-txt: #0C1021;
 $cl-white: #F1F1F1;
 $cl-orange: #C53D2F;
@@ -21,18 +21,39 @@ html {
     html {
         font-size: 16.64px;
     }
-    
+}
+@media only screen and (max-width: 991px) {
+    html {
+        font-size: 1vw;
+    }
+}
+@media only screen and (max-width: 475px) {
+    html {
+        font-size: 2.66666vw;
+    }
 }
 
 body {
     background-color: $cl-bg;
     color: rgba($cl-txt, 1);
 }
+.icon {
+    &-22 {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+}
 .txt {
     font-weight: 400;
     &-88 {
         font-size: 8.8rem;
         line-height: 1.2em;
+        @media only screen and (max-width: 991px) {
+            font-size: 5.6rem;
+        }
+        @media only screen and (max-width: 475px) {
+            font-size: 4.2rem;
+        }
     }
     &-16 {
         font-size: 1.6rem;
@@ -68,6 +89,8 @@ body {
 }
 a {
     text-decoration: none;
+    //display: inline-block;
+    
 }
 .btn {
     display: flex;
@@ -101,6 +124,9 @@ a {
     &.grid {
         grid-template-columns: repeat(16, 1fr);
         column-gap: 4rem;
+        @media only screen and (max-width: 991px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
     &.fluid {
         max-width: none;
@@ -115,6 +141,9 @@ a {
     &-16 {
         grid-template-columns: repeat(16, 1fr);
         column-gap: 4rem;
+        @media only screen and (max-width: 991px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 }
 
