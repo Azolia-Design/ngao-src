@@ -13,15 +13,38 @@ $cl-orange: #C53D2F;
     box-sizing: border-box;
 }
 
+html {
+    font-family: 'inter';
+    font-size: .52vw;
+}
+@media only screen and (min-width: 2560px) {
+    html {
+        font-size: 16.64px;
+    }
+    
+}
+
+body {
+    background-color: $cl-bg;
+    color: rgba($cl-txt, 1);
+}
 .txt {
     font-weight: 400;
     &-88 {
         font-size: 8.8rem;
         line-height: 1.2em;
     }
+    &-16 {
+        font-size: 1.6rem;
+        line-height: 1.3em;
+    }
     &-18 {
         font-size: 1.8rem;
         line-height: 1.3em;
+    }
+    &-20 {
+        font-size: 2rem;
+        line-height: 1.2em;
     }
     &-24 {
         font-size: 2.4rem;
@@ -60,16 +83,6 @@ a {
     }
 }
 
-html {
-    font-family: 'inter';
-    font-size: .52vw;
-}
-
-body {
-    background-color: $cl-bg;
-    color: rgba($cl-txt, 1);
-}
-
 .img {
     width: 100%;
     height: auto;
@@ -83,11 +96,18 @@ body {
 .container {
     margin: 0 auto;
     width: 100%;
-    max-width: 192rem;
+    max-width: 256rem;
     padding: 0 8rem;
     &.grid {
         grid-template-columns: repeat(16, 1fr);
         column-gap: 4rem;
+    }
+    &.fluid {
+        max-width: none;
+    }
+    &.no-pd {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 .grid {
