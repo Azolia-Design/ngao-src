@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'inter';
+    src: url('../fonts/Inter-Variable.ttf');
+}
+$cl-bg: #FCECDE;
+$cl-txt: #0C1021;
+$cl-white: #F1F1F1;
+$cl-orange: #C53D2F;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.txt {
+    font-weight: 400;
+    &-88 {
+        font-size: 8.8rem;
+        line-height: 1.2em;
+    }
+    &-18 {
+        font-size: 1.8rem;
+        line-height: 1.3em;
+    }
+    &-24 {
+        font-size: 2.4rem;
+        line-height: 1.2em;
+    }
+    &-semi {
+        font-weight: 600;
+    }
+    &-bold {
+        font-weight: 700;
+    }
+    &-black {
+        font-weight: 900;
+    }
+    &-extra {
+        font-weight: 800;
+    }
+    &-upper {
+        text-transform: uppercase;
+    }
+}
+a {
+    text-decoration: none;
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.4rem 3.2rem;
+    background-color: rgba($cl-txt, 1);
+    color: $cl-white;
+    &-icon {
+        column-gap: 3rem;
+        padding-right: 4.2rem;
+
+    }
+}
+
+html {
+    font-family: 'inter';
+    font-size: .52vw;
+}
+
+body {
+    background-color: $cl-bg;
+    color: rgba($cl-txt, 1);
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    display: block;
+    &-height {
+        height: 100%;
+        width: auto;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 192rem;
+    padding: 0 8rem;
+    &.grid {
+        grid-template-columns: repeat(16, 1fr);
+        column-gap: 4rem;
+    }
+}
+.grid {
+    display: grid;
+    &-16 {
+        grid-template-columns: repeat(16, 1fr);
+        column-gap: 4rem;
+    }
+}
+
