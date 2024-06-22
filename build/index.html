@@ -109,6 +109,9 @@
     setTimeout(() => {
       document.querySelector('.loader__wrap').classList.add('loaded')
     }, 300);
+    document.querySelector('[data-popup="open"]').addEventListener('click', function(e) {
+        e.preventDefault();
+    })
     </script>
     <!--<script src="/index.342c4ab4.js" defer=""></script>-->
 </body>
